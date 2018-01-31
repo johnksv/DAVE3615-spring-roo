@@ -1,0 +1,45 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-01-31 20:59:13
+project --topLevelPackage com.s305089.bookstore
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class ~.Author --testAutomatically 
+entity jpa --class ~.Book --testAutomatically 
+entity jpa --class ~.Category --testAutomatically 
+entity jpa --class ~.BookOrder --testAutomatically 
+entity jpa --class ~.Shipping --testAutomatically 
+field string --fieldName Name --notNull 
+field string --fieldName Address --notNull 
+field number --type int --fieldName postalCode
+focus --class ~.Author
+field string name --notNull 
+field number --type int  age --notNull 
+field number --type double --fieldName ratings
+field set --fieldName category --type ~.Category
+field set --fieldName book --type ~.Book --mappedBy author
+focus --class ~.Category
+field string --fieldName Name
+focus --class ~.Book
+field string title --notNull 
+field string isbn --notNull
+field number --type float --fieldName cost
+field number --type int --fieldName quantity
+field reference --fieldName author --type ~.Author
+field set --fieldName category --type ~.Category
+focus --class ~.BookOrder
+field reference --type ~.Shipping --fieldName shipping
+field set --fieldName books --type ~.Book
+web mvc setup
+web mvc all --package ~.web
+selenium test --controller ~.web.AuthorController
+selenium test --controller ~.web.BookController
+selenium test --controller ~.web.CategoryController
+selenium test --controller ~.web.BookOrderController
+selenium test --controller ~.web.ShippingController
+logging setup --level INFO 
+email sender setup --hostServer smtp.gmail.com --protocol SMTP --port 587 --encoding TLS --username tempemailicanuse --password Software
+interface --class ~.email.NotificationService
+class --class ~.email.CustomerServiceImpl
+email template setup --from tempeemailicanuse@gmail.com --subject "Customer question"
+field email template --fieldName mailTemplate --class ~.email.CustomerServiceImpl
+// script --file log_1.roo
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-01-31 21:02:09

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_s305089_bookstore_Shipping" items="${shippings}" z="pXOGU+Q2JWLDQHEiTw2mUGZm+Cc=">
+        <table:table data="${shippings}" id="l_com_s305089_bookstore_Shipping" path="/shippings" z="1jUj/A7MC7dlKvLNbjO+mZXiHn0=">
+            <table:column id="c_com_s305089_bookstore_Shipping_Name" property="name" z="fk47W1RW80/4hj/pQS5XfdD55OQ="/>
+            <table:column id="c_com_s305089_bookstore_Shipping_Address" property="address" z="Wj9CrABSvabmYY/REFahG7TP5GM="/>
+            <table:column id="c_com_s305089_bookstore_Shipping_postalCode" property="postalCode" z="WKoq/FhXNykqqXCJj+cTIe09zow="/>
+        </table:table>
+    </page:list>
+</div>

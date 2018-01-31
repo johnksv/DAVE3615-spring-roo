@@ -1,0 +1,16 @@
+
+#menu h2 {
+    color: #fff;
+    background: #204567;
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: 12px;
+}
+
+#menu a:hover {
+    color: #204567;
+    background: #fff;
+}
+
+
+#footer a:link {color: #315f67;}

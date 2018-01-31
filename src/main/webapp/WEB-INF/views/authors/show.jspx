@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_s305089_bookstore_Author" object="${author}" path="/authors" z="aYnFsmYmCYLDS+fuCdL2IRvosXg=">
+        <field:display field="name" id="s_com_s305089_bookstore_Author_name" object="${author}" z="TNnh/fn2VTegelTsShY8iNFmFrU="/>
+        <field:display field="age" id="s_com_s305089_bookstore_Author_age" object="${author}" z="0HIKUjtkXaMEFZ5F50mfSmZ32oU="/>
+        <field:display field="ratings" id="s_com_s305089_bookstore_Author_ratings" object="${author}" z="warQjgljCLA+peOpF4fgOwRZ0QY="/>
+        <field:display field="category" id="s_com_s305089_bookstore_Author_category" object="${author}" z="JkffLLAltD/nUsHLG234yNt56yw="/>
+        <field:display field="book" id="s_com_s305089_bookstore_Author_book" object="${author}" z="IlzSZNgQT0CFCNapJQVaLQZ6QUQ="/>
+    </page:show>
+</div>

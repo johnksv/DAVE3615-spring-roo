@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_s305089_bookstore_Book" items="${books}" z="RtbJkF4+xsskRCkDpgrMTknGjw8=">
+        <table:table data="${books}" id="l_com_s305089_bookstore_Book" path="/books" z="b8GiptQWWpLa70z7+B/0hIKA7dk=">
+            <table:column id="c_com_s305089_bookstore_Book_title" property="title" z="G5+57tU1jGX4Rl1j/ZH6HU9j8pE="/>
+            <table:column id="c_com_s305089_bookstore_Book_isbn" property="isbn" z="KEQ2KkIy8hw1m47k4WZyx1O0WHs="/>
+            <table:column id="c_com_s305089_bookstore_Book_cost" property="cost" z="DEGnQnOlspsJ2oN0BnuUX+DrpXY="/>
+            <table:column id="c_com_s305089_bookstore_Book_quantity" property="quantity" z="g6vbQ8uhQvF03lM6AXTbPOdHBxo="/>
+            <table:column id="c_com_s305089_bookstore_Book_author" property="author" z="SmJWZZo4neL6jZfL0bRUhxrc8+Y="/>
+            <table:column id="c_com_s305089_bookstore_Book_category" property="category" z="ssp0Pht1gE8L5FA9w/9ocg34ock="/>
+        </table:table>
+    </page:list>
+</div>

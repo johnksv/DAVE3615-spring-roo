@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_s305089_bookstore_Book" modelAttribute="book" path="/books" versionField="Version" z="HtZaCG8pzPOvCVvtyOPyP1PKe7M=">
+        <field:input field="title" id="c_com_s305089_bookstore_Book_title" required="true" z="MfNBaEGOE25Mx7ekBrCb830j9iw="/>
+        <field:input field="isbn" id="c_com_s305089_bookstore_Book_isbn" required="true" z="T/Nt3vb2NPy7SNUbYiu+FmrUFm0="/>
+        <field:input field="cost" id="c_com_s305089_bookstore_Book_cost" z="+i3K38cFWGroNNA5wZ18i4fvcfE="/>
+        <field:input field="quantity" id="c_com_s305089_bookstore_Book_quantity" z="ktietL8egrY1Qg1VrNyOo2Nv6lU="/>
+        <field:select field="author" id="c_com_s305089_bookstore_Book_author" itemValue="id" items="${authors}" path="/authors" z="RGOFoiEAu0spUZkmn12M7mBJkA0="/>
+        <field:select field="category" id="c_com_s305089_bookstore_Book_category" itemValue="id" items="${categorys}" multiple="true" path="/categorys" z="jOovczv/EHOM28b/Y4X5aa8Th5w="/>
+    </form:update>
+</div>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+<link href="http://localhost:8080/" rel="selenium.base"/>
+<title>Selenium test for ShippingController</title>
+</head>
+<body>
+    <table border="1" cellpadding="1" cellspacing="1">
+        <thead>
+            <tr>
+                <td colspan="3" rowspan="1">Selenium test for ShippingController</td>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+                    <td>open</td>
+                    <td>http://localhost:8080/bookstore/shippings?form&amp;lang=en_US</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>_Name_id</td>
+                    <td>someName1</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>_Address_id</td>
+                    <td>someAddress1</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>_postalCode_id</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>clickAndWait</td>
+                    <td>//input[@id = 'proceed']</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>verifyText</td>
+                    <td>_s_com_s305089_bookstore_Shipping_Name_Name_id</td>
+                    <td>someName1</td>
+                </tr>
+                <tr>
+                    <td>verifyText</td>
+                    <td>_s_com_s305089_bookstore_Shipping_Address_Address_id</td>
+                    <td>someAddress1</td>
+                </tr>
+                <tr>
+                    <td>verifyText</td>
+                    <td>_s_com_s305089_bookstore_Shipping_postalCode_postalCode_id</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
