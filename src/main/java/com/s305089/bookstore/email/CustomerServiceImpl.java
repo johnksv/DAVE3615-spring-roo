@@ -3,7 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 
-public class CustomerServiceImpl {
+public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private transient SimpleMailMessage templateMessage;
