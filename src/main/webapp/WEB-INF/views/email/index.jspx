@@ -5,36 +5,36 @@
     <jsp:output omit-xml-declaration="yes"/>
     <spring:message code="label_email_index" htmlEscape="false" var="title"/>
 
-	<form action = "/email/" method = "POST">
-            Name: <input type = "text" name = "name"/>
-            <br />
-            Email: <input type = "text" name = "email" />
-            <br />
-            Subject: <input type = "text" name = "subject" />
-            <br />
-            Message:
-            <textarea name="Text1" cols="40" rows="5"></textarea>
-
-            <input type = "submit" value = "Submit" />
-        </form>
-
-
     <util:panel id="title" title="${title}">
         <spring:message code="application_name" htmlEscape="false" var="app_name"/>
         <h3>
             Customer support.
         </h3>
-        <form action = "/email/" method = "POST">
-            Name: <input type = "text" name = "name"/>
-            <br />
-            Email: <input type = "text" name = "email" />
-            <br />
-            Subject: <input type = "text" name = "subject" />
-            <br />
-            Message:
-            <textarea name="Text1" cols="40" rows="5"></textarea>
+        <p>
+            Contact us via this form, and we will come back to you as soon as possible.
+        </p>
 
-            <input type = "submit" value = "Submit" />
+        <form action="/email/" method="POST">
+            <div class="inputContainerCustom">
+                Name:
+                <input type="text" name="name"/>
+            </div>
+            <div class="inputContainerCustom">
+                Email:
+
+                <input type="email" name="email"/>
+            </div>
+            <div class="inputContainerCustom">
+                Subject:
+                <input type="text" name="subject"/>
+            </div>
+            <div class="inputContainerCustom">
+                Message:
+                <br/>
+                <textarea name="message" cols="40" rows="5">What's your message?</textarea>
+            </div>
+            <br/>
+            <input type="submit" value="Submit"/>
         </form>
     </util:panel>
 </div>
