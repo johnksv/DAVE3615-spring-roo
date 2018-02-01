@@ -26,5 +26,8 @@
         <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
             <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
         </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__emailindex_id" messageCode="global_generic" url="/email/index" z="YHGNJGeB7lg/hI9iXZWTdm9PrAE="/>
+        </menu:category>
     </menu:menu>
 </div>
