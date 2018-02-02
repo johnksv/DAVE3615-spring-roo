@@ -14,7 +14,7 @@
             Contact us via this form, and we will come back to you as soon as possible.
         </p>
 
-        <form action="/email/" method="POST">
+        <form action="./email/" method="POST">
             <div class="inputContainerCustom">
                 Name:
                 <input type="text" name="name"/>

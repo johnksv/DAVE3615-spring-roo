@@ -34,9 +34,9 @@ selenium test --controller ~.web.BookController
 selenium test --controller ~.web.CategoryController
 selenium test --controller ~.web.BookOrderController
 selenium test --controller ~.web.ShippingController
-logging setup --level INFO 
+logging setup --level INFO --package ALL_SPRING
 email sender setup --hostServer smtp.gmail.com --protocol SMTP --port 587 --encoding TLS --username tempemailicanuse --password Software
-interface --class ~.email.NotificationService
+interface --class ~.email.CustomerService
 class --class ~.email.CustomerServiceImpl
 email template setup --from tempeemailicanuse@gmail.com --subject "Customer question"
 field email template --fieldName mailTemplate --class ~.email.CustomerServiceImpl

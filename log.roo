@@ -52,3 +52,24 @@ addon list
 download status
 download accept terms of use
 addon list
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-02 14:12:27
+logging setup --level INFO --package ALL_SPRING
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-02 14:20:07
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-02 14:20:11
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-02 14:25:35
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-02 15:24:59
+entity jpa --class ~.email.Contact
+field string --fieldName fromName
+field string --fieldName message
+field string --fieldName subject
+web mvc controller --class ~.email.Contact
+field email template --class ~.email.Contact
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-02 15:47:50
+entity jpa --class ~.email.ContactInfo
+field string --fieldName fromName
+field string --fieldName message
+field string --fieldName subject
+field string --fieldName fromEmail
+// [failed] web mvc finder add --class ~.email.Contact --formBackingType ~.email.ContactInfo
