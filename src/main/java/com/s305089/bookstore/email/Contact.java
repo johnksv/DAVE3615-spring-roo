@@ -19,6 +19,17 @@ public class Contact {
 
     private static final Logger logger = Logger.getLogger(Contact.class);
 
+    @Autowired
+    private transient SimpleMailMessage templateMessage;
+
+    @Autowired
+    private transient MailSender mailTemplate;
+
+    @RequestMapping
+    public String index() {
+        return "contact/index";
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public String post(@Valid ContactInfo info, HttpServletRequest request, HttpServletResponse response) {
         logger.info("Getting ready to send email");
@@ -27,18 +38,6 @@ public class Contact {
         return "contact/ok";
 
     }
-
-
-    @RequestMapping
-    public String index() {
-        return "contact/index";
-    }
-
-    @Autowired
-    private transient SimpleMailMessage templateMessage;
-
-    @Autowired
-    private transient MailSender mailTemplate;
 
     private void sendMessage(ContactInfo user) {
         org.springframework.mail.SimpleMailMessage mailMessage = new org.springframework.mail.SimpleMailMessage(templateMessage);
