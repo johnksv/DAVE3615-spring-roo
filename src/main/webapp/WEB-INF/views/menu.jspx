@@ -4,7 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
-            <menu:item id="i_controller__emailindex_id" messageCode="global_generic" url="/email/index" z="YHGNJGeB7lg/hI9iXZWTdm9PrAE="/>
             <menu:item id="i_controller__contactindex_id" messageCode="global_generic" url="/contact/index" z="Di8OhMHwPYYibf32mbQypQr4y9o="/>
         </menu:category>
         <menu:category id="c_bookorder" z="l7V7fPJiEtLnOb3i88hiljx3ssY=">

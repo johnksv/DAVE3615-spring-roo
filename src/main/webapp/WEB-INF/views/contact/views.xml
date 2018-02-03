@@ -4,4 +4,7 @@
     <definition extends="default" name="contact/index">
         <put-attribute name="body" value="/WEB-INF/views/contact/index.jspx"/>
     </definition>
+    <definition extends="default" name="contact/ok">
+        <put-attribute name="body" value="/WEB-INF/views/contact/ok.jspx"/>
+    </definition>
 </tiles-definitions>

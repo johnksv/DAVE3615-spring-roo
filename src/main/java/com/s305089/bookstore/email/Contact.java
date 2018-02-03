@@ -1,17 +1,17 @@
 package com.s305089.bookstore.email;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.MailException;
+import org.springframework.mail.MailSender;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-
-import org.apache.log4j.Logger;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
 
 @RequestMapping("/contact/**")
 @Controller
@@ -22,11 +22,11 @@ public class Contact {
     @RequestMapping(method = RequestMethod.POST)
     public String post(@Valid ContactInfo info, HttpServletRequest request, HttpServletResponse response) {
         logger.info("Getting ready to send email");
-        sendMessage(info);
+        sendMessage(info); //If exception => redirect to uncauhtExaption.jspx
         logger.info("Done sending email");
-        return "contact/index";
-    }
+        return "contact/ok";
 
+    }
 
 
     @RequestMapping
@@ -42,15 +42,24 @@ public class Contact {
 
     private void sendMessage(ContactInfo user) {
         org.springframework.mail.SimpleMailMessage mailMessage = new org.springframework.mail.SimpleMailMessage(templateMessage);
-        mailMessage.setTo(user.getMessage());
-        mailMessage.setText(user.getMessage());
-        mailMessage.setCc(mailMessage.getFrom());
-        mailMessage.setFrom(user.getFromEmail());
-        mailMessage.setSubject(user.getSubject());
 
-        logger.info("Sending message to " + mailMessage.getTo()[0]);
-        logger.info("Sending message CC to " + mailMessage.getCc()[0]);
-        logger.info("Sending message from " + mailMessage.getFrom());
+        String toEmail = mailMessage.getFrom();
+        String userEmail = user.getFromEmail();
+        String subject = user.getSubject() + " - from: " + user.getFromName();
+        String message = user.getMessage();
+
+        mailMessage.setTo(toEmail);
+        mailMessage.setCc(userEmail);
+        mailMessage.setFrom(userEmail);
+        mailMessage.setSubject(subject);
+        mailMessage.setText(message);
+
+        logger.info("Message from " + mailMessage.getFrom());
+        logger.info("Message to " + mailMessage.getTo()[0]);
+        logger.info("Message CC to " + mailMessage.getCc()[0]);
+        logger.info("Message subject: " + mailMessage.getSubject());
+        logger.info("Message from name " + mailMessage.getFrom());
+
         mailTemplate.send(mailMessage);
     }
 }
