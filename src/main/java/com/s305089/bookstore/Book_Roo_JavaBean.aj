@@ -6,6 +6,7 @@ package com.s305089.bookstore;
 import com.s305089.bookstore.Author;
 import com.s305089.bookstore.Book;
 import com.s305089.bookstore.Category;
+import java.util.Calendar;
 import java.util.Set;
 
 privileged aspect Book_Roo_JavaBean {
@@ -56,6 +57,14 @@ privileged aspect Book_Roo_JavaBean {
     
     public void Book.setCategory(Set<Category> category) {
         this.category = category;
+    }
+    
+    public Calendar Book.getTimeFactor() {
+        return this.timeFactor;
+    }
+    
+    public void Book.setTimeFactor(Calendar timeFactor) {
+        this.timeFactor = timeFactor;
     }
     
 }

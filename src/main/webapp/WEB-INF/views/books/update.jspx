@@ -9,5 +9,6 @@
         <field:input field="quantity" id="c_com_s305089_bookstore_Book_quantity" z="ktietL8egrY1Qg1VrNyOo2Nv6lU="/>
         <field:select field="author" id="c_com_s305089_bookstore_Book_author" itemValue="id" items="${authors}" path="/authors" z="RGOFoiEAu0spUZkmn12M7mBJkA0="/>
         <field:select field="category" id="c_com_s305089_bookstore_Book_category" itemValue="id" items="${categorys}" multiple="true" path="/categorys" z="jOovczv/EHOM28b/Y4X5aa8Th5w="/>
+        <field:datetime dateTimePattern="${book_timefactor_date_format}" field="timeFactor" id="c_com_s305089_bookstore_Book_timeFactor" z="zn1l34TYcJiWINQ58UEwm5Eiuik="/>
     </form:update>
 </div>

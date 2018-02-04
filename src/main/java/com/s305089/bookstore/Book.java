@@ -8,6 +8,10 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
+import java.util.Calendar;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @RooJavaBean
 @RooToString
@@ -41,4 +45,10 @@ public class Book {
      */
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Category> category = new HashSet<Category>();
+
+    /**
+     */
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Calendar timeFactor;
 }

@@ -8,6 +8,8 @@ import com.s305089.bookstore.Book;
 import com.s305089.bookstore.BookDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -32,6 +34,7 @@ privileged aspect BookDataOnDemand_Roo_DataOnDemand {
         setCost(obj, index);
         setIsbn(obj, index);
         setQuantity(obj, index);
+        setTimeFactor(obj, index);
         setTitle(obj, index);
         return obj;
     }
@@ -49,6 +52,11 @@ privileged aspect BookDataOnDemand_Roo_DataOnDemand {
     public void BookDataOnDemand.setQuantity(Book obj, int index) {
         int quantity = index;
         obj.setQuantity(quantity);
+    }
+    
+    public void BookDataOnDemand.setTimeFactor(Book obj, int index) {
+        Calendar timeFactor = Calendar.getInstance();
+        obj.setTimeFactor(timeFactor);
     }
     
     public void BookDataOnDemand.setTitle(Book obj, int index) {

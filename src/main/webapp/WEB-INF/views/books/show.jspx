@@ -9,5 +9,6 @@
         <field:display field="quantity" id="s_com_s305089_bookstore_Book_quantity" object="${book}" z="AiinKEJPgZkA/vvDhfIc5eTc8Tc="/>
         <field:display field="author" id="s_com_s305089_bookstore_Book_author" object="${book}" z="NI0eoEjJbOExhyspZRymg8AyS/M="/>
         <field:display field="category" id="s_com_s305089_bookstore_Book_category" object="${book}" z="noa5J5VI0IiadJ7wuRxvKorLO6s="/>
+        <field:display calendar="true" dateTimePattern="${book_timefactor_date_format}" field="timeFactor" id="s_com_s305089_bookstore_Book_timeFactor" object="${book}" z="XMsWZwQ6lAopbAxufnmJpc8xlgo="/>
     </page:show>
 </div>

@@ -14,7 +14,7 @@ privileged aspect Book_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Book.entityManager;
     
-    public static final List<String> Book.fieldNames4OrderClauseFilter = java.util.Arrays.asList("title", "isbn", "cost", "quantity", "author", "category");
+    public static final List<String> Book.fieldNames4OrderClauseFilter = java.util.Arrays.asList("title", "isbn", "cost", "quantity", "author", "category", "timeFactor");
     
     public static final EntityManager Book.entityManager() {
         EntityManager em = new Book().entityManager;
