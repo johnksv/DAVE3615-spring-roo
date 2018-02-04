@@ -34,7 +34,7 @@
       <img align="right" alt="${fn:escapeXml(sponsored)}" src="${logo}"/>
     </a>
     <p>
-      Made by: John kasper Svergja - s305089
+      Made by: John Kasper Svergja - s305089, with good help from Spring ROO
     </p>
   </span>
 </div>

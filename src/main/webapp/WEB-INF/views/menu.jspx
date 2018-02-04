@@ -6,21 +6,13 @@
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__contactindex_id" messageCode="global_generic" url="/contact/index" z="Di8OhMHwPYYibf32mbQypQr4y9o="/>
         </menu:category>
-        <menu:category id="c_bookorder" z="l7V7fPJiEtLnOb3i88hiljx3ssY=">
-            <menu:item id="i_bookorder_new" messageCode="global_menu_new" url="/bookorders?form" z="vgYVBalO1VwQE5nxSSxSVQ5Sy5o="/>
-            <menu:item id="i_bookorder_list" messageCode="global_menu_list" url="/bookorders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MAy5v+dZ8QeYP1B68DOOZkxjQO0="/>
+        <menu:category id="c_category" z="kY676wLbZKc59UbcUGM8ogjOGOc=">
+            <menu:item id="i_category_new" messageCode="global_menu_new" url="/categorys?form" z="Xqz6msHtFFIlT4/UwJALJOYTD1I="/>
+            <menu:item id="i_category_list" messageCode="global_menu_list" url="/categorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6D9be6DQ6UCnl0O7TDbbrkOhNIE="/>
         </menu:category>
         <menu:category id="c_author" z="DETG4XqcVC9sb/BVL/ybUSG8lUM=">
             <menu:item id="i_author_new" messageCode="global_menu_new" url="/authors?form" z="e6WikSiFx46UnQunBmCd54pmrYE="/>
             <menu:item id="i_author_list" messageCode="global_menu_list" url="/authors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="/71/+sYxLDw3jeyTZyEHzZ9CQQQ="/>
-        </menu:category>
-        <menu:category id="c_shipping" z="JmBo7ZZdirfIZ+CbHPMwQubPJUY=">
-            <menu:item id="i_shipping_new" messageCode="global_menu_new" url="/shippings?form" z="msu+rA52Dne/lJfjRNMzsJDWkg8="/>
-            <menu:item id="i_shipping_list" messageCode="global_menu_list" url="/shippings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NcIzXGKwmTmkhuNTVSbNu2jppE8="/>
-        </menu:category>
-        <menu:category id="c_category" z="kY676wLbZKc59UbcUGM8ogjOGOc=">
-            <menu:item id="i_category_new" messageCode="global_menu_new" url="/categorys?form" z="Xqz6msHtFFIlT4/UwJALJOYTD1I="/>
-            <menu:item id="i_category_list" messageCode="global_menu_list" url="/categorys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="6D9be6DQ6UCnl0O7TDbbrkOhNIE="/>
         </menu:category>
         <menu:category id="c_book" z="WxiVAJUlwzLkYi6u7YpEjYOT82A=">
             <menu:item id="i_book_new" messageCode="global_menu_new" url="/books?form" z="gAIxvrBOHQC/N0HWTGD46jzwyk8="/>
@@ -29,6 +21,14 @@
             <menu:item id="fi_book_category" messageCode="global_menu_find" url="/books?find=ByCategory&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="m1aUWtq3q+edTEV40qBbAvHmVJI="/>
             <menu:item id="fi_book_isbnequals" messageCode="global_menu_find" url="/books?find=ByIsbnEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="ymwKlsJ9sdyXHdcYBE312zImrW0="/>
             <menu:item id="fi_book_titleequals" messageCode="global_menu_find" url="/books?find=ByTitleEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="/MOYJe7qz3DmC3g+Tr6vm2o3gNw="/>
+        </menu:category>
+        <menu:category id="c_bookorder" z="l7V7fPJiEtLnOb3i88hiljx3ssY=">
+            <menu:item id="i_bookorder_new" messageCode="global_menu_new" url="/bookorders?form" z="vgYVBalO1VwQE5nxSSxSVQ5Sy5o="/>
+            <menu:item id="i_bookorder_list" messageCode="global_menu_list" url="/bookorders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MAy5v+dZ8QeYP1B68DOOZkxjQO0="/>
+        </menu:category>
+        <menu:category id="c_shipping" z="JmBo7ZZdirfIZ+CbHPMwQubPJUY=">
+            <menu:item id="i_shipping_new" messageCode="global_menu_new" url="/shippings?form" z="msu+rA52Dne/lJfjRNMzsJDWkg8="/>
+            <menu:item id="i_shipping_list" messageCode="global_menu_list" url="/shippings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NcIzXGKwmTmkhuNTVSbNu2jppE8="/>
         </menu:category>
         <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
             <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>

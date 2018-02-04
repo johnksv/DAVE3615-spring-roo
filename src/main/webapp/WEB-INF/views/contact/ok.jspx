@@ -7,7 +7,7 @@
     <util:panel id="title" title="${title}">
         <spring:message code="application_name" htmlEscape="false" var="app_name"/>
         <h3>
-            Email sent.
+            Email sent. Please add tempeemailicanuse@gmail.com to your whitelist.
         </h3>
     </util:panel>
 </div>
