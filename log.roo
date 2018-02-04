@@ -73,3 +73,12 @@ field string --fieldName message
 field string --fieldName subject
 field string --fieldName fromEmail
 // [failed] web mvc finder add --class ~.email.Contact --formBackingType ~.email.ContactInfo
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-04 10:00:51
+finder list --class ~.Book
+finder add findBooksByAuthor
+finder add findBooksByCategory
+finder add findBooksByTitleEquals
+find add findBooksByIsbnEquals
+web mvc finder all
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-04 10:12:43

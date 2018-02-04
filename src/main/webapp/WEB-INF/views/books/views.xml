@@ -13,4 +13,16 @@
 <definition extends="default" name="books/update">
         <put-attribute name="body" value="/WEB-INF/views/books/update.jspx"/>
     </definition>
+<definition extends="default" name="books/findBooksByAuthor">
+        <put-attribute name="body" value="/WEB-INF/views/books/findBooksByAuthor.jspx"/>
+    </definition>
+<definition extends="default" name="books/findBooksByCategory">
+        <put-attribute name="body" value="/WEB-INF/views/books/findBooksByCategory.jspx"/>
+    </definition>
+<definition extends="default" name="books/findBooksByIsbnEquals">
+        <put-attribute name="body" value="/WEB-INF/views/books/findBooksByIsbnEquals.jspx"/>
+    </definition>
+<definition extends="default" name="books/findBooksByTitleEquals">
+        <put-attribute name="body" value="/WEB-INF/views/books/findBooksByTitleEquals.jspx"/>
+    </definition>
 </tiles-definitions>

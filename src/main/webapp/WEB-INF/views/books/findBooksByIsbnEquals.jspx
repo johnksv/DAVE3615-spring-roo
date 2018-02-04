@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByIsbnEquals" id="ff_com_s305089_bookstore_Book" path="/books" z="c4rkCJFCQ4nb5w9rFdFK57RTtHg=">
+        <field:input disableFormBinding="true" field="isbn" id="f_com_s305089_bookstore_Book_isbn" required="true" z="vxsPQ0Zno0C8B0bCnhzvirZ/1tY="/>
+    </form:find>
+</div>

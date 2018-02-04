@@ -25,6 +25,10 @@
         <menu:category id="c_book" z="WxiVAJUlwzLkYi6u7YpEjYOT82A=">
             <menu:item id="i_book_new" messageCode="global_menu_new" url="/books?form" z="gAIxvrBOHQC/N0HWTGD46jzwyk8="/>
             <menu:item id="i_book_list" messageCode="global_menu_list" url="/books?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VM0+BikyiEq8a8S+W6bSp3FXQFo="/>
+            <menu:item id="fi_book_author" messageCode="global_menu_find" url="/books?find=ByAuthor&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="EaaSSPDLzoNAeH42g7TFJdNblfE="/>
+            <menu:item id="fi_book_category" messageCode="global_menu_find" url="/books?find=ByCategory&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="m1aUWtq3q+edTEV40qBbAvHmVJI="/>
+            <menu:item id="fi_book_isbnequals" messageCode="global_menu_find" url="/books?find=ByIsbnEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="ymwKlsJ9sdyXHdcYBE312zImrW0="/>
+            <menu:item id="fi_book_titleequals" messageCode="global_menu_find" url="/books?find=ByTitleEquals&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="/MOYJe7qz3DmC3g+Tr6vm2o3gNw="/>
         </menu:category>
         <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
             <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
