@@ -49,7 +49,7 @@ public class Contact {
 
         mailMessage.setTo(toEmail);
         mailMessage.setCc(userEmail);
-        mailMessage.setFrom(userEmail);
+        mailMessage.setFrom(toEmail); //Has to do this since gmail is authenticated with "my" account
         mailMessage.setSubject(subject);
         mailMessage.setText(message);
 
