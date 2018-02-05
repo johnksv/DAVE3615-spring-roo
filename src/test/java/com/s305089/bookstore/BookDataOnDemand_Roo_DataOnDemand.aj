@@ -65,6 +65,9 @@ privileged aspect BookDataOnDemand_Roo_DataOnDemand {
     
     public void BookDataOnDemand.setQuantity(Book obj, int index) {
         int quantity = index;
+        if (quantity < 0) {
+            quantity = 0;
+        }
         obj.setQuantity(quantity);
     }
     
