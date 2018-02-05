@@ -11,6 +11,7 @@ import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.roo.addon.web.mvc.controller.finder.RooWebFinder;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 
 import javax.servlet.ServletException;
@@ -33,9 +34,8 @@ public class BookController {
     //https://raginggoblin.wordpress.com/2013/05/05/spring-roo-8-uploading-images/
 
     @InitBinder
-    protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws ServletException {
-        binder.registerCustomEditor(byte[].class,
-                new ByteArrayMultipartFileEditor());
+    protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) {
+        binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
@@ -47,8 +47,7 @@ public class BookController {
         }
         uiModel.asMap().clear();
         book.setContentType(multipartFile.getContentType());
-        logger.info("image of type " + book.getContentType());
-        logger.info("image size: " + multipartFile.getSize());
+        logger.info("image of type " + book.getContentType() + ", image size: " + multipartFile.getSize());
         book.persist();
         return "redirect:/books/" + encodeUrlPathSegment(book.getId().toString(), httpServletRequest);
     }
@@ -68,13 +67,26 @@ public class BookController {
         return null;
     }
 
-    @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
-    public String update(@Valid Book book, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
+    @RequestMapping(value = "/update", method = RequestMethod.POST, produces = "text/html")
+    public String update(@Valid Book book, BindingResult bindingResult, Model uiModel,
+                         @RequestParam("image") MultipartFile multipartFile, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
             populateEditForm(uiModel, book);
             return "books/update";
         }
         uiModel.asMap().clear();
+
+        byte[] image = book.getImage();
+        if (image.length != 0) {
+            logger.info("new image uploaded");
+            book.setContentType(multipartFile.getContentType());
+        } else {
+            logger.info("No new image provided, use old");
+            Book dbBook = Book.findBook(book.getId());
+            book.setContentType(dbBook.getContentType());
+            book.setImage(dbBook.getImage());
+        }
+
         book.merge();
         return "redirect:/books/" + encodeUrlPathSegment(book.getId().toString(), httpServletRequest);
     }

@@ -47,13 +47,14 @@ public class Book {
     /**
      */
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Calendar timeFactor;
 
     /**
      */
     @Lob
     @Basic(fetch = FetchType.LAZY)
+    @Column(length = 10 * 1024 * 1024) //10 MB limit. Also so we don't get exception if we update/change image.
     private byte[] image;
 
     /**

@@ -32,7 +32,6 @@ privileged aspect BookController_Roo_Controller_Finder {
         } else {
             uiModel.addAttribute("books", Book.findBooksByAuthor(author, sortFieldName, sortOrder).getResultList());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "books/list";
     }
     
@@ -53,7 +52,6 @@ privileged aspect BookController_Roo_Controller_Finder {
         } else {
             uiModel.addAttribute("books", Book.findBooksByCategory(category, sortFieldName, sortOrder).getResultList());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "books/list";
     }
     
@@ -73,7 +71,6 @@ privileged aspect BookController_Roo_Controller_Finder {
         } else {
             uiModel.addAttribute("books", Book.findBooksByIsbnEquals(isbn, sortFieldName, sortOrder).getResultList());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "books/list";
     }
     
@@ -93,7 +90,6 @@ privileged aspect BookController_Roo_Controller_Finder {
         } else {
             uiModel.addAttribute("books", Book.findBooksByTitleEquals(title, sortFieldName, sortOrder).getResultList());
         }
-        addDateTimeFormatPatterns(uiModel);
         return "books/list";
     }
     
