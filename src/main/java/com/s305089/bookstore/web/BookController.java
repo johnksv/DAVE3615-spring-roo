@@ -29,6 +29,9 @@ public class BookController {
 
     private static final Logger logger = Logger.getLogger(BookController.class);
 
+    //Thank you to raginggoblin for example
+    //https://raginggoblin.wordpress.com/2013/05/05/spring-roo-8-uploading-images/
+
     @InitBinder
     protected void initBinder(HttpServletRequest request, ServletRequestDataBinder binder) throws ServletException {
         binder.registerCustomEditor(byte[].class,
@@ -45,7 +48,7 @@ public class BookController {
         uiModel.asMap().clear();
         book.setContentType(multipartFile.getContentType());
         logger.info("image of type " + book.getContentType());
-        logger.info("img byte length: " + book.getImage().length);
+        logger.info("image size: " + multipartFile.getSize());
         book.persist();
         return "redirect:/books/" + encodeUrlPathSegment(book.getId().toString(), httpServletRequest);
     }
