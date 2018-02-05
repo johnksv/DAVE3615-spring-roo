@@ -2,6 +2,8 @@ package com.s305089.bookstore;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
 import org.springframework.roo.addon.tostring.RooToString;
+
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,6 +23,7 @@ public class Author {
     /**
      */
     @NotNull
+    @Min(0)
     private int age;
 
     /**

@@ -32,6 +32,9 @@ privileged aspect AuthorDataOnDemand_Roo_DataOnDemand {
     
     public void AuthorDataOnDemand.setAge(Author obj, int index) {
         int age = index;
+        if (age < 0) {
+            age = 0;
+        }
         obj.setAge(age);
     }
     
