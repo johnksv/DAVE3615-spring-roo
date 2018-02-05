@@ -10,5 +10,9 @@
         <field:display field="author" id="s_com_s305089_bookstore_Book_author" object="${book}" z="NI0eoEjJbOExhyspZRymg8AyS/M="/>
         <field:display field="category" id="s_com_s305089_bookstore_Book_category" object="${book}" z="noa5J5VI0IiadJ7wuRxvKorLO6s="/>
         <field:display calendar="true" dateTimePattern="${book_timefactor_date_format}" field="timeFactor" id="s_com_s305089_bookstore_Book_timeFactor" object="${book}" z="XMsWZwQ6lAopbAxufnmJpc8xlgo="/>
+        <field:display field="image" id="s_com_s305089_bookstore_Book_image" object="${book}" render="false" z="user-managed"/>
+        <field:display field="imageType" id="s_com_s305089_bookstore_Book_imageType" object="${book}" render="false" z="user-managed"/>
+        <img height="256px" src="${book.id}/image"/>
+        <field:display field="contentType" id="s_com_s305089_bookstore_Book_contentType" object="${book}" z="vp8AceJ3NE+wcmr7c03qh2qSvS8="/>
     </page:show>
 </div>

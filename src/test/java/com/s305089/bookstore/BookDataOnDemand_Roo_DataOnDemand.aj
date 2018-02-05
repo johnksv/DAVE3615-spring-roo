@@ -3,7 +3,7 @@
 
 package com.s305089.bookstore;
 
-import com.s305089.bookstore.AuthorDataOnDemand;
+import com.s305089.bookstore.Author;
 import com.s305089.bookstore.Book;
 import com.s305089.bookstore.BookDataOnDemand;
 import java.security.SecureRandom;
@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect BookDataOnDemand_Roo_DataOnDemand {
@@ -26,12 +25,12 @@ privileged aspect BookDataOnDemand_Roo_DataOnDemand {
     
     private List<Book> BookDataOnDemand.data;
     
-    @Autowired
-    AuthorDataOnDemand BookDataOnDemand.authorDataOnDemand;
-    
     public Book BookDataOnDemand.getNewTransientBook(int index) {
         Book obj = new Book();
+        setAuthor(obj, index);
+        setContentType(obj, index);
         setCost(obj, index);
+        setImage(obj, index);
         setIsbn(obj, index);
         setQuantity(obj, index);
         setTimeFactor(obj, index);
@@ -39,9 +38,24 @@ privileged aspect BookDataOnDemand_Roo_DataOnDemand {
         return obj;
     }
     
+    public void BookDataOnDemand.setAuthor(Book obj, int index) {
+        Author author = null;
+        obj.setAuthor(author);
+    }
+    
+    public void BookDataOnDemand.setContentType(Book obj, int index) {
+        String contentType = "contentType_" + index;
+        obj.setContentType(contentType);
+    }
+    
     public void BookDataOnDemand.setCost(Book obj, int index) {
         float cost = new Integer(index).floatValue();
         obj.setCost(cost);
+    }
+    
+    public void BookDataOnDemand.setImage(Book obj, int index) {
+        byte[] image = String.valueOf(index).getBytes();
+        obj.setImage(image);
     }
     
     public void BookDataOnDemand.setIsbn(Book obj, int index) {

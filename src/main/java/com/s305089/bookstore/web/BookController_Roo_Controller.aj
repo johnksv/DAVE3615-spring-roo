@@ -9,11 +9,9 @@ import com.s305089.bookstore.Category;
 import com.s305089.bookstore.web.BookController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,17 +20,6 @@ import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect BookController_Roo_Controller {
-    
-    @RequestMapping(method = RequestMethod.POST, produces = "text/html")
-    public String BookController.create(@Valid Book book, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, book);
-            return "books/create";
-        }
-        uiModel.asMap().clear();
-        book.persist();
-        return "redirect:/books/" + encodeUrlPathSegment(book.getId().toString(), httpServletRequest);
-    }
     
     @RequestMapping(params = "form", produces = "text/html")
     public String BookController.createForm(Model uiModel) {
@@ -61,17 +48,6 @@ privileged aspect BookController_Roo_Controller {
         }
         addDateTimeFormatPatterns(uiModel);
         return "books/list";
-    }
-    
-    @RequestMapping(method = RequestMethod.PUT, produces = "text/html")
-    public String BookController.update(@Valid Book book, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
-        if (bindingResult.hasErrors()) {
-            populateEditForm(uiModel, book);
-            return "books/update";
-        }
-        uiModel.asMap().clear();
-        book.merge();
-        return "redirect:/books/" + encodeUrlPathSegment(book.getId().toString(), httpServletRequest);
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")

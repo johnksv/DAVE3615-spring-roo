@@ -67,4 +67,20 @@ privileged aspect Book_Roo_JavaBean {
         this.timeFactor = timeFactor;
     }
     
+    public byte[] Book.getImage() {
+        return this.image;
+    }
+    
+    public void Book.setImage(byte[] image) {
+        this.image = image;
+    }
+    
+    public String Book.getContentType() {
+        return this.contentType;
+    }
+    
+    public void Book.setContentType(String contentType) {
+        this.contentType = contentType;
+    }
+    
 }

@@ -2,7 +2,7 @@
 <div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:create id="fc_com_s305089_bookstore_Book" modelAttribute="book" path="/books" render="${empty dependencies}" z="RGEH7hxVEjMlLIEngkWt/sD4KKU=">
+    <form:create id="fc_com_s305089_bookstore_Book" modelAttribute="book" multipart="true" path="/books" render="${empty dependencies}" z="user-managed">
         <field:input field="title" id="c_com_s305089_bookstore_Book_title" required="true" z="MfNBaEGOE25Mx7ekBrCb830j9iw="/>
         <field:input field="isbn" id="c_com_s305089_bookstore_Book_isbn" required="true" z="T/Nt3vb2NPy7SNUbYiu+FmrUFm0="/>
         <field:input field="cost" id="c_com_s305089_bookstore_Book_cost" z="+i3K38cFWGroNNA5wZ18i4fvcfE="/>
@@ -10,6 +10,8 @@
         <field:select field="author" id="c_com_s305089_bookstore_Book_author" itemValue="id" items="${authors}" path="/authors" z="RGOFoiEAu0spUZkmn12M7mBJkA0="/>
         <field:select field="category" id="c_com_s305089_bookstore_Book_category" itemValue="id" items="${categorys}" multiple="true" path="/categorys" z="jOovczv/EHOM28b/Y4X5aa8Th5w="/>
         <field:datetime dateTimePattern="${book_timefactor_date_format}" field="timeFactor" id="c_com_s305089_bookstore_Book_timeFactor" z="zn1l34TYcJiWINQ58UEwm5Eiuik="/>
+        <field:input field="image" id="c_com_s305089_bookstore_Book_image" type="file" z="user-managed"/>
+        <field:input field="contentType" id="c_com_s305089_bookstore_Book_contentType" render="false" z="user-managed"/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_s305089_bookstore_Book" render="${not empty dependencies}" z="6hGk6JK5jUQo8HK+DhXJJy0Rrbk="/>
 </div>

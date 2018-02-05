@@ -87,3 +87,12 @@ focus --class ~.Book
 field date --type java.util.Calendar --fieldName timeFactor
 exit
 // Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-04 14:41:03
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-05 11:04:52
+hint
+hint
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-05 11:42:19
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-05 11:44:01
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2018-02-05 11:45:34
+exit
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log closed at 2018-02-05 12:28:59
